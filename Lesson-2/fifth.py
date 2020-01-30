@@ -11,6 +11,10 @@ def fifth(dictionary):
     name = input()
     while (flag):
         password = input()
+        if name not in dictionary:
+            print("Incorrect name. Please try again...")
+            name = input()
+            continue
         if password == dictionary[name]:
             print("Password for user:", name, " is correct ")
             flag = 0
@@ -19,5 +23,5 @@ def fifth(dictionary):
             print("Please try again...")
 
 
-name_pass = {"Max": "M1234", "Alex": "A1234", "Mikle": "M2345", "Ann": "A2345"}
+name_pass = {"Max": "M1234", "Alex": "A1234", "Mikе": "M2345", "Ann": "A2345"}
 fifth(name_pass)
