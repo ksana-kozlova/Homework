@@ -6,7 +6,7 @@ import requests
 def get_html_size(url):
     headers = {'content-type': 'html'}
     return len(requests.get(url, headers=headers).text)
-    return len(requests.get(url).text)
 
-URL = 'https://google.com'
-print(get_html_size(URL))
+
+url = 'https://google.com'
+print(get_html_size(url))
