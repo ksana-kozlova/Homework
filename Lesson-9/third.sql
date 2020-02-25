@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS service_relationships (
 	head_id INT UNSIGNED NOT NULL,
     subordinate_id INT UNSIGNED NOT NULL,
     FOREIGN KEY (head_id) REFERENCES employees(id),
-    FOREIGN KEY (head_id) REFERENCES employees(id)
+    FOREIGN KEY (subordinate_id) REFERENCES employees(id)
 );
 
 INSERT INTO employees ( id, first_name, last_name, position, salary) VALUES ( null, 'Zhelezin', 'Mikhail', 'Deep Learning Software Engineer', '40000');
